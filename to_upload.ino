@@ -4,6 +4,8 @@
 
 /* This program herein is going to monitor an indoor temperature and upload the readings to Thingspeak for visualization*/
 
+// IMPORTANT! TZ_adjust=1;d=$(date +%s);t=$(echo "60*60*$TZ_adjust/1" | bc);echo T$(echo $d+$t | bc ) > /dev/ttyACM0 (PUT THIS SERIAL IN YOUR COMMAND PROMPT)
+
 #include <TimeLib.h>
 #include <Ethernet.h>
 #include <ThingSpeak.h>
